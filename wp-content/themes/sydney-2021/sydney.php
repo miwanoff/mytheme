@@ -1,5 +1,5 @@
 <?php
-// Template Name: Sydney 2021
+// Template Name: Page Builder Page
 
 get_header();
 

@@ -28,9 +28,14 @@
             <div class="col-md-7 col-sm-7">
                 <ul class="logoLine">
                     <li>
-                        <a href="#" class="logoPage">
+                        <!-- <a href="#" class="logoPage">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo">
+						</a> -->
+                        <!-- Logo from Kirki  -->
+                        <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
+                            <?php get_template_part('template-parts/theme', 'logo');?>
                         </a>
+
                     </li>
                     <li>
                         <a href="#">

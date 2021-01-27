@@ -156,15 +156,15 @@ add_action('widgets_init', 'sydney_2021_widgets_init');
  */
 function sydney_2021_scripts()
 {
+    wp_enqueue_style('sydney-2021-bootstrap', get_template_directory_uri() . "/assets/css/bootstrap.min.css", array(), _S_VERSION);
+
+    wp_enqueue_style('sydney-2021-font-awesome', get_template_directory_uri() . "/assets/css/font-awesome.min.css", array(), _S_VERSION);
+
     wp_enqueue_style('sydney-2021-style', get_stylesheet_uri(), array(), _S_VERSION);
 
     wp_enqueue_style('sydney-2021-stylesheet', get_template_directory_uri() . "/assets/css/stylesheet.css", array(), _S_VERSION);
 
     wp_enqueue_style('sydney-2021-animate', get_template_directory_uri() . "/assets/css/animate.css", array(), _S_VERSION);
-
-    wp_enqueue_style('sydney-2021-bootstrap', get_template_directory_uri() . "/assets/css/bootstrap.min.css", array(), _S_VERSION);
-
-    wp_enqueue_style('sydney-2021-font-awesome', get_template_directory_uri() . "/assets/css/font-awesome.min.css", array(), _S_VERSION);
 
     wp_enqueue_style('sydney-2021-owl.carousel', get_template_directory_uri() . "/assets/css/owl.carousel.min.css", array(), _S_VERSION);
 
