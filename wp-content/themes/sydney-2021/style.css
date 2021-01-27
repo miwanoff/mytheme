@@ -937,3 +937,7 @@ a.more-link:focus {
   transition: 0.2s;
   text-decoration: none;
 }
+
+.dropdown-toggle b.caret {
+  display: none;
+}
