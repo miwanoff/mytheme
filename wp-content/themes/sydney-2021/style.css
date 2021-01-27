@@ -910,3 +910,30 @@ textarea {
   margin-right: auto;
   margin-bottom: 1.5em;
 }
+
+a.more-link {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0;
+  position: absolute;
+  color: #fff;
+  background: #6d6e71;
+  border: 1px solid #6d6e71;
+  transition: 0.2s;
+  text-decoration: none;
+  margin-right: 12px;
+  padding: 5px 23px;
+  margin-top: 0;
+  bottom: 0;
+  font-family: "HelveticaNeueCondensedBold";
+}
+a.more-link:hover,
+a.more-link:focus {
+  color: #6d6e71;
+  background: #fff;
+  border: 1px solid #6d6e71;
+  transition: 0.2s;
+  text-decoration: none;
+}
