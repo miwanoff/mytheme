@@ -29,5 +29,6 @@ the_content(
 
 );
 ?>
+        <p> <a href="#" class="bookNow">BOOK NOW</a></p>
     </div><!-- .entry-content -->
 </div><!-- #post-<?php the_ID();?> -->
