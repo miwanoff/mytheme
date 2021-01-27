@@ -9,26 +9,55 @@
 
 ?>
 
-<div class="articleSpace">
-    <div class="imgBlock">
-        <?php sydney_2021_post_thumbnail();?>
-    </div>
-    <div class="contentText">
-        <h5 class="titleArticle"><?php the_title();?></h5>
+<article id="post-<?php the_ID();?>" <?php post_class();?>>
+    <header class="entry-header">
+        <?php
+if (is_singular()):
+    the_title('<h1 class="entry-title">', '</h1>');
+else:
+    the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
+endif;
+
+if ('post' === get_post_type()):
+?>
+        <div class="entry-meta">
+            <?php
+sydney_2021_posted_on();
+sydney_2021_posted_by();
+?>
+        </div><!-- .entry-meta -->
+        <?php endif;?>
+    </header><!-- .entry-header -->
+
+    <?php sydney_2021_post_thumbnail();?>
+
+    <div class="entry-content">
         <?php
 the_content(
     sprintf(
         wp_kses(
             /* translators: %s: Name of current post. Only visible to screen readers */
-            __('<a href="#" class="moreInfo">MORE INFO</a>'),
+            __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'sydney-2021'),
             array(
                 'span' => array(
                     'class' => array(),
                 ),
             )
-        )
+        ),
+        wp_kses_post(get_the_title())
+    )
+);
+
+wp_link_pages(
+    array(
+        'before' => '<div class="page-links">' . esc_html__('Pages:', 'sydney-2021'),
+        'after' => '</div>',
     )
 );
 ?>
     </div><!-- .entry-content -->
-</div><!-- #post-<?php the_ID();?> -->
+
+    <footer class="entry-footer">
+        <?php sydney_2021_entry_footer();?>
+    </footer><!-- .entry-footer -->
+</article><!-- #post-<?php the_ID();?> -->

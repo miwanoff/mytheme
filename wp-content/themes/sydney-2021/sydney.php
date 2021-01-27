@@ -12,7 +12,10 @@ get_header();
     <section class="articleSpaceBlock container">
         <h4 class="tittleBlock padleft"><?php bloginfo('name');?></h4>
         <?php
-if (have_posts()):
+// The Query
+$the_query = new WP_Query(array(
+    'post_type' => 'post', 'category_name' => 'news'));
+if ($the_query->have_posts()):
 
     if (is_home() && !is_front_page()):
     ?>
@@ -23,15 +26,15 @@ if (have_posts()):
 endif;
 
 /* Start the Loop */
-while (have_posts()):
-    the_post();
+while ($the_query->have_posts()):
+    $the_query->the_post();
 
     /*
      * Include the Post-Type-specific template for the content.
      * If you want to override this in a child theme, then include a file
      * called content-___.php (where ___ is the Post Type name) and that will be used instead.
      */
-    get_template_part('template-parts/content', get_post_type());
+    get_template_part('template-parts/content', "front");
 
 endwhile;
 
@@ -42,6 +45,7 @@ else:
     get_template_part('template-parts/content', 'none');
 
 endif;
+wp_reset_postdata();
 ?>
     </section>
 
