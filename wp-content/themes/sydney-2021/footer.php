@@ -62,11 +62,19 @@
 // printf(esc_html__('Theme: %1$s by %2$s.', 'sydney-2021'), 'sydney-2021', '<a href="https://marinaiff.com/">MAI</a>');
 //echo "ffffff" . get_theme_mod('f-copyright');
 //print_r(get_theme_mod('social-links'));
-if (!empty(get_theme_mod('fcopyright'))) {
-    echo '<div class="copyright">' . get_theme_mod('fcopyright') . '</div>';
-} else {
-    printf(esc_html__('Theme: %1$s by %2$s.', 'sydney-2021'), 'sydney-2021', '<a href="https://github.com/miwanoff">MAI</a>');
+// if (!empty(get_theme_mod('fcopyright'))) {
+//     echo '<div class="copyright">' . get_theme_mod('fcopyright') . '</div>';
+// } else {
+//     printf(esc_html__('Theme: %1$s by %2$s.', 'sydney-2021'), 'sydney-2021', '<a href="https://github.com/miwanoff">MAI</a>');
+// }
+
+if (Kirki::get_option('mk', 'fcopyright')) {
+    $footer_copyright_text = Kirki::get_option('mk', 'fcopyright');
+    echo $footer_copyright_text;
 }
+// else {
+//     printf(esc_html__('Theme: %1$s by %2$s.', 'sydney-2021'), 'sydney-2021', '<a href="https://github.com/miwanoff">MAI</a>');
+// }
 ?>
     </p>
 
