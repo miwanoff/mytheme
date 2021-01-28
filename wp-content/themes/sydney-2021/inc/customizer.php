@@ -73,3 +73,8 @@ require get_template_directory() . '/inc/customizer/sections/general.php';
  * Social Settings
  */
 require get_template_directory() . '/inc/customizer/sections/social.php';
+
+/**
+ * Copyright Settings
+ */
+require get_template_directory() . '/inc/customizer/sections/copyright.php';

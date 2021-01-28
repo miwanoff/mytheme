@@ -223,10 +223,10 @@ require get_template_directory() . '/tgm/init-tgm.php';
  */
 require_once dirname(__FILE__) . '/tgm/class-tgm-plugin-activation.php';
 
-/**
- * Include Kirki сustomizer.
- */
-require get_template_directory() . '/inc/сustomizer.php';
+// /**
+//  * Include Kirki сustomizer.
+//  */
+// require get_template_directory() . '/inc/сustomizer.php';
 
 /**
  * Include Walker_Nav_Menu.
