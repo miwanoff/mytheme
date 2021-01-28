@@ -232,3 +232,40 @@ require get_template_directory() . '/inc/сustomizer.php';
  * Include Walker_Nav_Menu.
  */
 include get_theme_file_path('includes/custom-nav-walker.php');
+
+/**
+ * Social links
+ */
+
+if (!function_exists('sydney2021_social_links')) {
+    function sydney2021_social_links($class)
+    {
+        $links = get_theme_mod('social-links');
+        $output = '';
+        $output .= '<ul class="' . $class . '">';
+        foreach ($links as $val) {
+            $link_body = '';
+            $target = '';
+            if ($val['link_target'] !== true) {
+                $target = 'target="_blank"';
+            }
+
+            $link_text = '';
+            if (!empty($val['link_text'])) {
+                $link_text = 'title="' . $val['link_text'] . '"';
+            }
+
+            $link_url = '';
+            if (!empty($val['link_url'])) {
+                $link_url = 'href="' . $val['link_url'] . '"';
+            }
+
+            $link_icon = '<i class="' . $val['link_icon'] . '"></i>';
+
+            $link_body = '<li><a ' . $link_url . ' ' . $target . ' ' . $link_text . ' >' . $link_icon . '</a></li>';
+            $output .= $link_body;
+        }
+        $output .= '</ul>';
+        return $output;
+    }
+}

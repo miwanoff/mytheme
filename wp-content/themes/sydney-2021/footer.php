@@ -53,18 +53,8 @@
     <a href="mailto:admin@sydneyphilharmonia.com.au" class="text-center footerLink">admin@sydneyphilharmonia.com.au</a>
     <a href="sydneyphilharmonia.com.au" class="text-center footerLink">sydneyphilharmonia.com.au </a>
     <a href="singwithpassion.com.au" class="text-center footerLink">singwithpassion.com.au </a>
-    <ul class="footerListSoc">
-        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/fb.png" alt="facebook"></a>
-        </li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tw.png" alt="twiter"></a>
-        </li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/ins.png"
-                    alt="instagram"></a></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png"
-                    alt="youtube"></a></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/search.png"
-                    alt="search"></a></li>
-    </ul>
+
+    <?php echo sydney2021_social_links("footerListSoc"); ?>
 
     <p class="textFooter text-center">
         <?php

@@ -57,23 +57,7 @@
                         <li><a href="#" class="shop">Shop
                                 cart</a></li>
                         <li>
-                            <ul class="headerListSoc">
-                                <li>
-                                    <div class="sendSearch"></div>
-                                </li>
-                                <li><a href="#"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/headerSoc/soc4.png"
-                                            alt="twiter"></a></li>
-                                <li><a href="#"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/headerSoc/soc3.png"
-                                            alt="instagram"></a></li>
-                                <li><a href="#"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/headerSoc/soc2.png"
-                                            alt="youtube"></a></li>
-                                <li><a href="#"><img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/headerSoc/soc1.png"
-                                            alt="search"></a></li>
-                            </ul>
+                            <?php echo sydney2021_social_links("headerListSoc"); ?>
                         </li>
                         <li><a href="#">donate</a></li>
                     </ul>

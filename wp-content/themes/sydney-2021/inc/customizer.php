@@ -68,3 +68,8 @@ add_action('customize_preview_init', 'sydney_2021_customize_preview_js');
  * General Settings
  */
 require get_template_directory() . '/inc/customizer/sections/general.php';
+
+/**
+ * Social Settings
+ */
+require get_template_directory() . '/inc/customizer/sections/social.php';
