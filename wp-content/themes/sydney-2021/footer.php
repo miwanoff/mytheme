@@ -68,8 +68,8 @@
 //     printf(esc_html__('Theme: %1$s by %2$s.', 'sydney-2021'), 'sydney-2021', '<a href="https://github.com/miwanoff">MAI</a>');
 // }
 
-if (Kirki::get_option('mk', 'fcopyright')) {
-    $footer_copyright_text = Kirki::get_option('mk', 'fcopyright');
+if (Kirki::get_option('sydney2021', 'fcopyright')) {
+    $footer_copyright_text = Kirki::get_option('sydney2021', 'fcopyright');
     echo $footer_copyright_text;
 }
 // else {
