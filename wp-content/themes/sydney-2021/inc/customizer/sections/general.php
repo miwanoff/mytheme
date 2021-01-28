@@ -77,7 +77,7 @@ Kirki::add_field('sydney2021', array(
     'default' => 70,
     'choices' => array(
         'min' => '0',
-        'max' => '100',
+        'max' => '400',
         'step' => '1',
     ),
     'active_callback' => array(
