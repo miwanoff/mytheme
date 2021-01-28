@@ -111,7 +111,63 @@ if (has_nav_menu('menu-1')) {
 ?>
         </nav>
     </header>
+    <!-- slider Kirki -->
+    <?php
+if (Kirki::get_option('sydney2021', 'layout_front_page_slider_image_one_setting')) {$slider_image_one = Kirki::get_option('sydney2021', 'layout_front_page_slider_image_one_setting');}
+if (Kirki::get_option('sydney2021', 'layout_front_page_slider_image_two_setting')) {$slider_image_two = Kirki::get_option('sydney2021', 'layout_front_page_slider_image_two_setting');}
+if (Kirki::get_option('sydney2021', 'layout_front_page_slider_image_three_setting')) {$slider_image_three = Kirki::get_option('sydney2021', 'layout_front_page_slider_image_three_setting');}
+?>
+    <?php
+if (Kirki::get_option('mk', 'layout_front_page_slider_image_one_setting') || Kirki::get_option('mk', 'layout_front_page_slider_image_two_setting') || Kirki::get_option('mk', 'layout_front_page_slider_image_three_setting')) {?>
 
+    <section class="sliderBlock">
+        <div class="owl-carousel owl-theme actSlider">
+            <div class="item mainSlider1">
+                <div class="sliderStyle slider1" style="background-image:url(<?=$slider_image_one?>)">
+                    <div class="containerSlider">
+                        <div class="blockNow">
+                            <h3>Elgar<br> The Dream of Gerontius</h3>
+                            <p class="textSlider">
+                                400 singers perform Elgar’s monumental work under the stunning Sydney Opera House sails.
+                            </p>
+                            <a href="#" class="nowLink">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item mainSlider2">
+                <div class="sliderStyle slider2" style="background-image:url(<?=$slider_image_two?>)">
+                    <div class="containerSlider">
+                        <div class="blockNow">
+                            <h3>Elgar<br> The Dream of Gerontius</h3>
+                            <p class="textSlider">
+                                400 singers perform Elgar’s monumental work under the stunning Sydney Opera House sails.
+                            </p>
+                            <a href="#" class="nowLink">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item mainSlider3">
+                <div class="sliderStyle slider3" style="background-image:url(<?=$slider_image_three?>)">
+                    <div class="containerSlider">
+                        <div class="blockNow">
+                            <h3>Elgar<br> The Dream of Gerontius</h3>
+                            <p class="textSlider">
+                                400 singers perform Elgar’s monumental work under the stunning Sydney Opera House sails.
+                            </p>
+                            <a href="#" class="nowLink">BOOK NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
+
+} else {
+    ?>
+    <!-- /slider Kirki-->
     <section class="sliderBlock">
         <div class="owl-carousel owl-theme actSlider">
             <div class="item mainSlider1">
@@ -168,3 +224,5 @@ if (has_nav_menu('menu-1')) {
             </div>
         </div>
     </section>
+    <?php }
+?>

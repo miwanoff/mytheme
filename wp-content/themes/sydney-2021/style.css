@@ -960,3 +960,7 @@ a.more-link:focus {
   width: 49px;
   height: 49px;
 }
+
+.owl-carousel .owl-stage-outer {
+  max-height: 580px;
+}
