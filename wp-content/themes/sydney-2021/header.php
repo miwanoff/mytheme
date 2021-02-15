@@ -119,7 +119,6 @@ if (Kirki::get_option('sydney2021', 'layout_front_page_slider_image_three_settin
 ?>
     <?php
 if (Kirki::get_option('mk', 'layout_front_page_slider_image_one_setting') || Kirki::get_option('mk', 'layout_front_page_slider_image_two_setting') || Kirki::get_option('mk', 'layout_front_page_slider_image_three_setting')) {?>
-
     <section class="sliderBlock">
         <div class="owl-carousel owl-theme actSlider">
             <div class="item mainSlider1">
