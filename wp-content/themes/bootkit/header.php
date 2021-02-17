@@ -126,7 +126,7 @@ if (get_theme_mod('bootkit_phone_number')) {
     </header>
 
     <?php }?>
-
+    <?php breadcrumbs();?>
     <div class="container">
         <?php if (get_theme_mod('bootkit_header_show_search')) {?>
         <!-- Top Search  ============================ -->

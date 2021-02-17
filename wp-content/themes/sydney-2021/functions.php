@@ -269,3 +269,9 @@ if (!function_exists('sydney2021_social_links')) {
         return $output;
     }
 }
+
+// add_action('after_setup_theme', 'true_load_theme_textdomain');
+
+// function true_load_theme_textdomain(){
+//     load_theme_textdomain( 'truemisha', get_template_directory() . '/languages' );
+// }
