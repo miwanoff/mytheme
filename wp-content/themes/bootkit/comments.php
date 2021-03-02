@@ -40,7 +40,7 @@ if (post_password_required()) {
     ],
     'class_submit' => 'btn btn-primary',
     'label_submit' => __('Submit Comment', 'bootkit'),
-    'title_reply' => __('<h5 class="card-header">Leave a Comment</span>:', 'bootkit'),
+    'title_reply' => '<h5 class="card-header">' . __('Leave a Comment:', 'bootkit') . '</span>',
 ]
 );
 

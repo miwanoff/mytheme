@@ -63,3 +63,17 @@ a {
 </style>
 <?php
 }
+
+add_action('after_setup_theme', 'bootkit_load_theme_textdomain');
+
+function bootkit_load_theme_textdomain()
+{
+    load_theme_textdomain('bootkit', get_template_directory() . '/languages');
+}
+
+function site_url_shortcode($atts)
+{
+    return site_url();
+}
+
+add_shortcode('myurl', 'site_url_shortcode');

@@ -118,17 +118,17 @@ foreach ($arr as $key => $fields) {
         echo "</div>";
     }
 }
-$arr = get_field_objects();
-foreach ($arr as $key => $fields) {
-    if (!is_protected_meta($key, 'post')) {
-        echo "<div class=\"col-lg-3\">";
-        echo '<div class="card">';
-        print_r("<div class=\"card-header\"><h4 class=\"card-title\">" . get_field_object($key)["label"] . "</h4></div>");
-        print_r("<div class=\"card-body\"><p class=\"card-text\">" . get_field_object($key)["value"] . "</p></div>");
-        echo "</div>";
-        echo "</div>";
-    }
-}
+// $arr = get_field_objects();
+// foreach ($arr as $key => $fields) {
+//     if (!is_protected_meta($key, 'post')) {
+//         echo "<div class=\"col-lg-3\">";
+//         echo '<div class="card">';
+//         print_r("<div class=\"card-header\"><h4 class=\"card-title\">" . get_field_object($key)["label"] . "</h4></div>");
+//         print_r("<div class=\"card-body\"><p class=\"card-text\">" . get_field_object($key)["value"] . "</p></div>");
+//         echo "</div>";
+//         echo "</div>";
+//     }
+// }
 
 ?>
         <ul>

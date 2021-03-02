@@ -9,9 +9,9 @@ Text Domain: time-to-post-title
 License: GPL2
  */
 
-function time_to_post_content($title)
+function time_to_post_content($content)
 {
-    echo '<div class="time">' . __('Time of post creation: ', 'time-to-post-title') . get_the_time() . __("Date of post creation:", 'time-to-post-title') . get_the_date() . '</div>';
+    return $content . '<div class="time">' . __('Time of post creation: ', 'time-to-post-title') . get_the_time() . __("Date of post creation:", 'time-to-post-title') . get_the_date() . '</div>';
 }
 add_filter('the_content', 'time_to_post_content');
 
@@ -25,3 +25,9 @@ function true_load_plugin_textdomain()
 {
     load_plugin_textdomain('time-to-post-title', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
+
+function time_shortcode($atts)
+{
+    return time_to_post_content($content);
+}
+add_shortcode('time_to_post', 'time_shortcode');
