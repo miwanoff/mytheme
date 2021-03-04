@@ -77,3 +77,14 @@ function site_url_shortcode($atts)
 }
 
 add_shortcode('myurl', 'site_url_shortcode');
+
+// Ajax
+add_action('wp_ajax_bootkit', 'bootkit_ajax');
+add_action('wp_ajax_nopriv_bootkit', 'bootkit_ajax');
+
+function bootkit_ajax()
+{
+    $summa = $_POST['param1'] + $_POST['param2']; // сумма двух чисел
+    echo $summa;
+    die;
+}
