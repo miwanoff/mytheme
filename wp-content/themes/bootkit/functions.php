@@ -88,3 +88,18 @@ function bootkit_ajax()
     echo $summa;
     die;
 }
+
+//-----------template plugin
+
+// add_action('template_include', 'my_template_include');
+// function my_template_include($template)
+// {
+
+//     $file = dirname(__FILE__) . 'load-more-button/templates/template.php';
+//     if (file_exists($file)) {
+//         $template = $file;
+//     }
+
+//     return $template;
+
+// }

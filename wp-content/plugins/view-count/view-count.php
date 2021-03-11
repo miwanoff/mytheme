@@ -70,31 +70,33 @@ function update_view_count()
 
 add_action('wp_head', 'update_view_count');
 
-function uninstall_view_count()
-{
-    global $wpdb;
+// function uninstall_view_count()
+// {
+//     global $wpdb;
 
-    $query = "SELECT
-              1
-          FROM
-              `information_schema`.`columns`
-          WHERE
-              `column_name`='view_count'
-              AND
-              `table_name`='" . $wpdb->posts . "'";
+//     $query = "SELECT
+//               1
+//           FROM
+//               `information_schema`.`columns`
+//           WHERE
+//               `column_name`='view_count'
+//               AND
+//               `table_name`='" . $wpdb->posts . "'";
 
-    $result = $wpdb->get_row($query);
+//     $result = $wpdb->get_row($query);
 
-    if (is_null($result)) {
-        return;
-    }
+//     //print_r($result);
 
-    $query = "ALTER TABLE
-              " . $wpdb->posts . "
-          DROP
-              `view_count`";
+//     if (is_null($result)) {
+//         return;
+//     }
 
-    $wpdb->query($query);
-}
+//     $query = "ALTER TABLE
+//               " . $wpdb->posts . "
+//           DROP
+//               `view_count`";
 
-register_uninstall_hook(__FILE__, 'uninstall_view_count');
+//     $wpdb->query($query);
+// }
+
+// register_uninstall_hook(__FILE__, 'uninstall_view_count');
