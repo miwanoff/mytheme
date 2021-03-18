@@ -10,12 +10,14 @@ Author URI: http://ex.com/
 
 function bootkit_load_more_scripts()
 {
-    // In most cases it is already included on the page and this line can be removed
-    wp_enqueue_script('jquery');
+    if (!is_singular()) {
+        // In most cases it is already included on the page and this line can be removed
+        wp_enqueue_script('jquery');
 
-    // register our main script but do not enqueue it yet
-    wp_register_script('loadmore', plugin_dir_url(__FILE__) . 'js/loadmore.js', array('jquery'));
-    wp_enqueue_script('loadmore');
+        // register our main script but do not enqueue it yet
+        wp_register_script('loadmore', plugin_dir_url(__FILE__) . 'js/loadmore.js', array('jquery'));
+        wp_enqueue_script('loadmore');
+    }
 }
 
 add_action('wp_enqueue_scripts', 'bootkit_load_more_scripts');
