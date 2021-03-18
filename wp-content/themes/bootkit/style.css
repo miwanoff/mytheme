@@ -9,9 +9,9 @@ Text Domain: bootkit
 */
 
 /* calendar widget */
-.widget_calendar {
+/* .widget_calendar {
   float: left;
-}
+} */
 #wp-calendar {
   width: 100%;
 }
