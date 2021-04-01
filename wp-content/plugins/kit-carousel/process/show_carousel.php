@@ -2,22 +2,28 @@
 
 function kc_show_carousel($content)
 {
-
     $args = [
-        'post_type' => 'post',
-        'showposts' => 12,
+        //'post_type' => 'post',
+        'showposts' => get_option('kc_count'),
         //'category_name' => 'cooking',
-        'post_type' => 'post',
+        'category_name' => get_option('kc_category_name'),
+        //'post_type' => 'post',
+        'post_type' => get_option('kc_post_type') ? get_option('kc_post_type') : 'post',
         //'post_type' => 'recipe',
-        //'post_type' => 'movies',
-        //'tag' => 'cooking',
+        // 'post_type' => 'movies',
+        'tag' => get_option('kc_tag'),
         'post_status' => 'publish',
         'orderby' => 'date',
         'order' => 'DESC',
     ];
 
     $query = new WP_Query($args);
-
+    // if (get_option('kc_category_name')) {
+    //     $query->set('category_name', get_option('kc_category_name'));
+    // }
+    // if (get_option('kc_category_name')) {
+    //     $query->set('tag', get_option('kc_tag'));
+    // }
     // $query = null;
     // $query =
     // $query = $query1;

@@ -16,9 +16,18 @@ define('KC_PLUGIN_URL', __FILE__);
 // Includes
 include 'includes/front/enqueue.php';
 include 'process/show_carousel.php';
+include 'includes/admin/admin.php';
 
 // Hooks
 add_action('wp_enqueue_scripts', 'kc_enqueue_scripts', 100);
-add_filter('the_content', 'kc_show_carousel');
+//add_filter('the_content', 'kc_show_carousel');
+// create custom plugin settings menu
+add_action('admin_menu', 'baw_create_menu');
 
 // Shortcodes
+
+function kc_show_carousel_shortcode($atts)
+{
+    return kc_show_carousel($content);
+}
+add_shortcode('kc_show_carousel', 'kc_show_carousel_shortcode');
