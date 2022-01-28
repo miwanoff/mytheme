@@ -908,5 +908,23 @@
   $.jqBootstrapValidation = function (options) {
     $(":input").not("[type=image],[type=submit]").jqBootstrapValidation.apply(this,arguments);
   };
+  $('.dropdown-sub', this).click(function(e){
+    $('.dropdown-menu', this).toggleClass('show');
+})
 
+//This is to stop the Bootstrap menu from closing when a link is clicked.
+$(document).on('click', '.dropdown', function (e) {
+    e.stopPropagation();
+});
 })( jQuery );
+
+(function($){
+  $(document).ready(function(){
+      $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+          event.preventDefault(); 
+          event.stopPropagation(); 
+          $(this).parent().siblings().removeClass('open');
+          $(this).parent().toggleClass('open');
+      });
+  }); 
+  })(jQuery);

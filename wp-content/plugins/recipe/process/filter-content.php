@@ -2,7 +2,8 @@
 
 function r_filter_recipe_content($content)
 {
-    if (!is_singular('recipe')) {
+
+    if (!is_singular('movies')) {
         return $content;
     }
 
@@ -16,7 +17,12 @@ function r_filter_recipe_content($content)
     $recipe_html = file_get_contents('recipe-template.php', true);
     $recipe_html = str_replace('RATE_I18N', __("Rating", "recipe"), $recipe_html);
     $recipe_html = str_replace('RECIPE_ID', $post->ID, $recipe_html);
+    //if (is_array($recipe_data)) {
     $recipe_html = str_replace('RECIPE_RATING', $recipe_data['rating'], $recipe_html);
+    //}
+    // else {
+    //     $recipe_html = str_replace('RECIPE_RATING', 0, $recipe_html);
+    // }
 
     $user_IP = $_SERVER['REMOTE_ADDR'];
 

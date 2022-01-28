@@ -14,10 +14,10 @@ function register_kc_settings()
 {
     //register our settings
     // register_setting('kc-settings-group', 'kc_post_type');
+    register_setting("kc-settings-group", "kc_post_type");
     register_setting('kc-settings-group', 'kc_category_name');
     register_setting('kc-settings-group', 'kc_tag');
     register_setting('kc-settings-group', 'kc_count');
-    register_setting("kc-settings-group", "kc_post_type");
 }
 
 function kc_settings_page()
@@ -65,7 +65,7 @@ function kc_settings_page()
             </tr>
 
             <tr valign="top">
-                <th scope="row">Tag</th>
+                <th scope="row">Tags</th>
                 <td><input type="text" name="kc_tag" value="<?php echo get_option('kc_tag'); ?>" /></td>
             </tr>
             <tr valign="top">
